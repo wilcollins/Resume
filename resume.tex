@@ -1,0 +1,330 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.2 (16/9/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[]{resume}
+\usepackage{fancyhdr}
+ 
+\pagestyle{fancy}
+\fancyhf{}
+ 
+\rfoot{Page \thepage \hspace{1pt}}
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lastupdated
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\namesection{Wil}{Collins}{ \urlstyle{same}\url{http://wilcollins.com} \\
+\href{mailto:wil.collins@gmail.com}{wil.collins@gmail.com} | (628) 333-9452
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.35\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education} 
+
+\subsection{Virginia Tech}
+\descript{BS in Computer Science}
+\descript{Minor in Mathematics}
+\datelocation{May 2014}{Blacksburg, VA}
+
+\skills{
+Focus in Human Computer Interaction \smallbreak
+College of Engineering
+}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     LINKS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Links} 
+Github:// \href{https://github.com/wilcollins}{\bf{wilcollins}} \\
+LinkedIn://  \href{https://www.linkedin.com/in/wilcollinsvt}{\bf{wilcollinsVT}} \\
+StackOverflow://  \href{https://stackoverflow.com/users/2104228/wilco}{\bf{wilco}} 
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     COURSEWORK
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Coursework}
+Creative Computing \\ 
+Computer Systems \\
+Cryptography \\
+Database Management Systems \\
+Human Computer Interaction 
+{\footnotesize \textit{\textbf{(Research Asst.) }}} \\
+Mobile Development for Android \\
+Multimedia, Hypertext, \& Information Access \\
+Theory of Data \& Algorithm Analysis \\
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     VOLUNTEER
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Volunteer}
+\runsubsection{VT Bus Tracker\smallbreak}
+\descript{UX Design \& Development}
+\simpledate{September 2011 - December 2011}
+
+\begin{tightemize}
+\item Redesign UX
+\item RESTful API development
+\end{tightemize}
+\sectionsep
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Skills}
+
+\descript{Proficient:} 
+\skills{
+Java \textbullet{} 
+JavaScript \textbullet{} 
+Node.js \textbullet{} 
+Docker \smallbreak 
+SQL \textbullet{} 
+NoSQL \textbullet{} 
+Bash \textbullet{} 
+Git \textbullet{} 
+Jenkins \smallbreak
+AWS \textbullet{}
+Terraform \textbullet{}
+Packer \textbullet{}
+Ansible
+}
+
+\descript{Experienced:} 
+\skills{
+Python \textbullet{}
+Ruby \textbullet{}
+Swift \textbullet{}
+Android \textbullet{} 
+PHP \smallbreak 
+C \textbullet{}  
+C++ \textbullet{} 
+Django \textbullet{}
+ML \textbullet{} 
+ETL \textbullet{}
+\LaTeX \smallbreak 
+TCP/IP \textbullet{} 
+DNS \textbullet{} 
+SMTP \textbullet{} 
+MQTT \smallbreak
+VMware \textbullet{}
+Mongo \textbullet{}
+Redis \textbullet{}
+GCP
+}
+\sectionsep
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     AWARDS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Awards \& Recognition} 
+\begin{tabular}{rll}
+2012 &  VTKW Entrepreneur Challenge Finalist\\
+2015 &  IBM Manager's Choice Q3 \\
+2016 & IBM Manager's Choice Q1 \\
+2016 & IBM Manager's Choice Q3 \\
+2016 & IBM Watson IoT Contest Finalist \\
+\end{tabular}
+\sectionsep
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.60\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Experience}
+
+\runsubsection{Agari Data, Inc.}
+\jobtitle{Quality Automation Engineer}
+\datelocation{November 2016 - May 2017}{San Mateo, CA}
+\newline
+\begin{tightemize}
+\item Build Docker network for local replica of near real-time email pipeline hosted on AWS
+\item Build end-to-end Java test harness utilizing the local Docker pipeline for black-box testing
+\item Build fully codified Jenkins system on AWS using Ansible \& Terraform
+\item Created more than 50\% cost savings for Jenkins using AWS Spot Instances for slaves 
+\item Develop performance metrics and dashboard to help meet pipeline SLA
+\end{tightemize}
+\sectionsep 
+
+\runsubsection{IBM}
+\jobtitle{Staff Software Engineer}
+\datelocation{June 2016 - November 2016}{San Francisco, CA}
+\begin{tightemize}
+\item Lead continuous integration of mobile project
+\item Develop multi-threaded automation framework for stable \& reliable GUI testing
+\item Manage customer delivery of framework \& support customer installations of application
+\item Develop bulk data loading apps to reduce load times by more than 50\%
+\item Build a robot interfacing with the IBM Watson IoT API\smallbreak
+\begin{tightemize}
+\item Natural language classifier, voice-to-text, \& text-to-voice
+\item Node.js command-and-control server with iOS Swift client app
+\end{tightemize}
+\end{tightemize}
+\sectionsep
+
+\runsubsection{IBM}
+\jobtitle{Software Engineer}
+\datelocation{June 2014 - May 2016}{San Francisco, CA}
+\begin{tightemize}
+\item Lead design \& development of Appium-based mobile automation framework 
+\item Design \& implement application layer of web framework \smallbreak
+\begin{tightemize}
+\item Improve time-to-value by reducing development by more than 50\%
+\end{tightemize}
+
+\item Improve automated data import process by 10x speed
+\item Design \& implement implicit wait algorithm for 10x speed improvement
+\item Automate multiple manual workflow processes to drive team agility
+\item Create \& manage application environments, including:\smallbreak
+
+\begin{tightemize}
+ \item Linux(RHEL) \& Windows servers
+ \item WebSphere \& Tomcat app servers
+ \item MS SQL, Oracle, DB2, \& MySQL databases
+\end{tightemize}
+
+
+\end{tightemize}
+\sectionsep
+
+\runsubsection{IBM}
+\jobtitle{Software Engineer Intern }
+\datelocation{June 2013 - December 2013}{San Ramon, CA}
+\begin{tightemize}
+\item Develop Selenium-based automation framework for QA regression testing
+\item Develop automated test suite totaling more than 200 test cases
+\item Build automation lab of virtual machines for remote automated testing
+\end{tightemize}
+\sectionsep
+
+
+\runsubsection{VT Software Technologies Lab}
+\jobtitle{Developer }
+\datelocation{September 2012 - May 2013}{Blacksburg, VA}
+\begin{tightemize}
+\item Implement customized web applications
+\item Upgrade and maintain existing database systems
+\item Redesign existing user interfaces to increase product usability
+\end{tightemize}
+\sectionsep
+
+\runsubsection{The Cartel}
+\jobtitle{Mobile \& Web Developer }
+\datelocation{May 2012 - May 2013}{Los Angeles, CA}
+\begin{tightemize}
+\item Design and develop mobile applications for iOS and Android
+\item Design and develop websites for clients
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Handshake Media}
+\jobtitle{Mobile \& Web Developer }
+\datelocation{October 2011 - May 2012}{Blacksburg, VA}
+\begin{tightemize}
+\item Develop mobile applications for iOS and Android
+\item Develop a web application using the Django Python framework
+\item Finalist in the VT KnowledgeWorks Entrepreneurship Challenge
+\end{tightemize}
+\sectionsep
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     RESEARCH
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Research}
+\runsubsection{Virginia Tech}
+\jobtitle{Undergraduate Research}
+\datelocation{January 2011 - May 2012}{Blacksburg, VA}
+\begin{tightemize}
+\item Develop a distributed game with different versions to understand the effect of visible information \& information security on user interactions
+\item Assist with data collection and management during experimental sessions
+\end{tightemize}
+\sectionsep
+
+
+\end{minipage} 
+\end{document}  \documentclass[]{article}
