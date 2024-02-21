@@ -9,11 +9,23 @@
 % Original repository:
 % https://github.com/deedydas/Deedy-Resume
 %
+% v2 author:
+% Wil Collins (http://wilcollins.com)
+%
+% v2 repository:
+% https://github.com/wilcollins/Resume
+%
+%****************************************************************************************
+%****************************************************************************************
+%****************************************************************************************
 % IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%****************************************************************************************
+%****************************************************************************************
+%****************************************************************************************
 %
 % This template uses several fonts not included with Windows/Linux by
 % default. If you get compilation errors saying a font is missing, find the line
-% on which the font is used and either change it to a font included with your
+% on which the font is used & either change it to a font included with your
 % operating system or comment the line out to use the default font.
 % 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -23,7 +35,7 @@
 % 2. Figure out a smoother way for the document to flow onto the next page.
 % 3. Add styling information for a "Projects/Hacks" section.
 % 4. Add location/address information
-% 5. Merge OpenFont and MacFonts as a single sty with options.
+% 5. Merge OpenFont & MacFonts as a single sty with options.
 % 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -41,6 +53,7 @@
 % 1. Overflows onto second page if any column's contents are more than the
 % vertical limit
 % 2. Hacky space on the first bullet point on the second column.
+% 3. Nested bullet points do not indent
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -53,6 +66,7 @@
  
 \rfoot{Page \thepage \hspace{1pt}}
 \begin{document}
+\nopagecolor{}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -66,75 +80,52 @@
 %     TITLE NAME
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\namesection{Wil}{Collins}{ \urlstyle{same}\url{http://wilcollins.com} \\
-\href{mailto:wil.collins@gmail.com}{wil.collins@gmail.com} | (628) 333-9452
-}
+%\namesection
+ %   {Wil Collins} % Name
+%    {(628) 333-9452 | wil.collins@gmail.com} % Contact Info
+%
+%\smallbreak
+%\smallbreak
+%\smallbreak
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 %     COLUMN ONE
 %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{minipage}[t]{0.35\textwidth} 
+  \begin{blackhighlight}
 
+    \section{Wil Collins}
+    wil.collins@gmail.com \\
+    (628) 333-9452  \\
+    github.com/wilcollins \\
+    linkedin.com/in/wilcollinsVT 
+  \end{blackhighlight}
+  \sectionsep
+
+
+
+\begin{grayhighlight}
+Product-focused polyglot engineer experienced designing \& building fault tolerant distributed systems, full-stack applications, \& data pipelines. Skilled at driving complex projects from concept to completion with efficiency \& scalability for more than 10 years.
+\end{grayhighlight}
+
+\sectionsep
+
+\begin{grayhighlight}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     EDUCATION
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \section{Education} 
 
 \subsection{Virginia Tech}
 \descript{BS in Computer Science}
 \descript{Minor in Mathematics}
-\datelocation{May 2014}{Blacksburg, VA}
 
-\skills{
-Focus in Human Computer Interaction \smallbreak
-College of Engineering
-}
 \sectionsep
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     LINKS
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{Links} 
-Github:// \href{https://github.com/wilcollins}{\bf{wilcollins}} \\
-LinkedIn://  \href{https://www.linkedin.com/in/wilcollinsvt}{\bf{wilcollinsVT}} \\
-StackOverflow://  \href{https://stackoverflow.com/users/2104228/wilco}{\bf{wilco}} 
-\sectionsep
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     COURSEWORK
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{Coursework}
-Creative Computing \\ 
-Computer Systems \\
-Cryptography \\
-Database Management Systems \\
-Human Computer Interaction 
-{\footnotesize \textit{\textbf{(Research Asst.) }}} \\
-Mobile Development for Android \\
-Multimedia, Hypertext, \& Information Access \\
-Theory of Data \& Algorithm Analysis \\
-\sectionsep
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     VOLUNTEER
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{Volunteer}
-\runsubsection{VT Bus Tracker\smallbreak}
-\descript{UX Design \& Development}
-\simpledate{September 2011 - December 2011}
-
-\begin{tightemize}
-\item Redesign UX
-\item RESTful API development
-\end{tightemize}
-\sectionsep
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -142,73 +133,109 @@ Theory of Data \& Algorithm Analysis \\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Skills}
-
-\descript{Proficient:} 
+\subsection{Languages}
 \skills{
-Java \textbullet{} 
-JavaScript \textbullet{} 
-Node.js \textbullet{} 
-Docker \smallbreak 
-SQL \textbullet{} 
-NoSQL \textbullet{} 
-Bash \textbullet{} 
-Git \textbullet{} 
-Jenkins \smallbreak
+Go \textbullet{} 
+Python \textbullet{} 
+Java (spring) \textbullet{} 
+Ruby on Rails \smallbreak
+JavaScript (node+react+vue) 
+}
+\smallbreak
+\subsection{Distributed Systems}
+\skills{
 AWS \textbullet{}
+Kubernetes \textbullet{}
+RabbitMQ \textbullet{}
+Redis \smallbreak
+SQL \textbullet{}
+NoSQL \textbullet{}
+Docker \textbullet{}
 Terraform \textbullet{}
-Packer \textbullet{}
-Ansible
+Ansible  \smallbreak
+System Optimization \textbullet{}
+Security in Depth   \smallbreak
+Fault Tolerance  \textbullet{}
+Microservice Architecture \smallbreak
+Blockchain \textbullet{}
+EVM \textbullet{}
+gRPC \textbullet{}
+Protobuf
 }
 
-\descript{Experienced:} 
+\smallbreak
+\subsection{Data Science \& ML}
 \skills{
-Python \textbullet{}
-Ruby \textbullet{}
-Swift \textbullet{}
-Android \textbullet{} 
-PHP \smallbreak 
-C \textbullet{}  
-C++ \textbullet{} 
-Django \textbullet{}
-ML \textbullet{} 
-ETL \textbullet{}
-\LaTeX \smallbreak 
-TCP/IP \textbullet{} 
-DNS \textbullet{} 
-SMTP \textbullet{} 
-MQTT \smallbreak
-VMware \textbullet{}
-Mongo \textbullet{}
-Redis \textbullet{}
-GCP
+scikit \textbullet{} 
+pandas \textbullet{} 
+numpy \textbullet{} 
+pytorch
 }
+
+
 \sectionsep
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     PROJECTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Projects}
+
+\subsection{Algorithmic Trading}
+\descript{Sole Proprietor}
+\datelocation{December 2021-Current}{USA}
+\begin{tightemize}
+\item Developed a Python-based trading system
+\item Leveraged historical \& real-time API data sources to improve signal reliability within my model
+\item Integrated multiple brokerage APIs for access to different assets \& liquidity
+\item Analyzed stock \& options market data using a variety of techniques including Monte Carlo simulations to optimize strategies, identify asymmetric trading opportunities, \& improve risk assessment
+\end{tightemize}
+
+\subsection{VT Global Disasters}
+\descript{ML Engineer}
+\datelocation{January 2013 - May 2013}{Blacksburg, VA}
+\begin{tightemize}
+\item Used NLP, machine learning, \& web crawling to build a corpus of news articles related to global disasters
+\end{tightemize}
+
+\subsection{VT HCI}
+\descript{Research Assistant}
+\datelocation{January 2011 - May 2012}{Blacksburg, VA}
+\begin{tightemize}
+\item Developed a distributed game with different versions to understand the effect of visible information \& information security on UX
+\end{tightemize}
+
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     AWARDS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Awards \& Recognition} 
-\begin{tabular}{rll}
-2012 &  VTKW Entrepreneur Challenge Finalist\\
-2015 &  IBM Manager's Choice Q3 \\
-2016 & IBM Manager's Choice Q1 \\
-2016 & IBM Manager's Choice Q3 \\
-2016 & IBM Watson IoT Contest Finalist \\
-\end{tabular}
-\sectionsep
+%\section{Awards \& Recognition} 
+%\begin{customtabular}
+%2012 &  VTKW Entrepreneur Challenge Finalist\\
+%2015 &  IBM Manager's Choice Q3 \\
+%2016 & IBM Manager's Choice Q1 \\
+%2016 & IBM Manager's Choice Q3 \\
+%2016 & IBM Watson IoT Contest Finalist \\
+%2016 & Accepted into IBM's Startup Accelerator \\
+%\end{customtabular}
+%\sectionsep
 
+\end{grayhighlight}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 %     COLUMN TWO
 %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \end{minipage} 
-\hfill
-\begin{minipage}[t]{0.60\textwidth} 
+\hspace{10pt}
+\begin{minipage}[t]{0.55\textwidth} 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     EXPERIENCE
@@ -216,112 +243,73 @@ GCP
 
 \section{Experience}
 
-\runsubsection{Agari Data, Inc.}
-\jobtitle{Quality Automation Engineer}
-\datelocation{November 2016 - May 2017}{San Mateo, CA}
-\newline
+\runsubsection{Forkable / The Kitchens}
+\jobtitle{Full-stack Engineer}
+\datelocation{May 2023 - January 2024}{Remote}
+\smallbreak
+\smallbreak
+\smallbreak
 \begin{tightemize}
-\item Build Docker network for local replica of near real-time email pipeline hosted on AWS
-\item Build end-to-end Java test harness utilizing the local Docker pipeline for black-box testing
-\item Build fully codified Jenkins system on AWS using Ansible \& Terraform
-\item Created more than 50\% cost savings for Jenkins using AWS Spot Instances for slaves 
-\item Develop performance metrics and dashboard to help meet pipeline SLA
+\item Developed full-stack features to improve ops efficiency \& customer UX using Ruby on Rails, Vue.js, GraphQL, Redis, \& Postgres
+\item Designed \& implemented features for customer refunds, customer receipts, \& enhanced user ratings that included Slack \& email integrations
+\item Collaborated with the product team to refine project requirements, prioritize tasks, \& deliver projects aligning with strategic goals
+\item Provided additional support in the form of critical performance optimizations, best practice coding reviews, \& end-to-end testing to ensure robustness \& reliability
+\end{tightemize}
+\sectionsep 
+
+
+\runsubsection{Axelar Network}
+\jobtitle{Backend Engineer}
+\datelocation{August 2021 - November 2022}{Remote}
+\begin{tightemize}
+\item Designed \& developed blockchain event-based microservices (control plane) for testnet, mainnet, \& token launches using Go, RabbitMQ, Redis, Terraform, gRPC, Protocol Buffers, \& Kubernetes on AWS Lambda, MQ, RDS, \& DynamoDB
+\item Improved reliability of RPC clients to 99.9\% with prioritized round-robining, integrating multiple node providers such as Infura \& QuickNode for business-critical operations
+\item Indexed EVM-compatible blockchain data
+\end{tightemize}
+\sectionsep 
+
+\runsubsection{Collective Health}
+\jobtitle{Senior Backend Engineer}
+\datelocation{June 2017 - July 2021}{San Francisco, CA}
+\begin{tightemize}
+\item Core contributor on greenfield, HIPAA-compliant medical claim adjudication pipeline 
+\item Designed \& developed microservices (data plane \& control plane) using Java Spring Boot, Go, GraphQL, RabbitMQ, PostgresSQL, Kubernetes, Terraform, \& Ansible using AWS SQS, Lambda, DynamoDB, RDS, ELB, \& API Gateway  
+\item Led quality planning \& analysis for the claims adjudication pipeline which resulted in industry-best auto-adjudication level of 95\%
+\item Developed observability \& performance metrics \& dashboards for real-time monitoring of production systems using Prometheus, Grafana, \& Kibana (ELK)
+\item Developed SQL notebooks in DataBricks to migrate entire database using Spark 
+\item Optimized core SQL queries for more than 90\% performance gains
+\item Partnered with data science to integrate ML model as a recommendation engine
+\item Founding member of the Security Champions program that built \& evangelized a strong culture of security with a focus on security-in-depth, including practices such as certified training, threat modeling, \& toolchain analysis
+\end{tightemize}
+\sectionsep 
+
+\runsubsection{Agari Data, Inc.}
+\jobtitle{Software Engineer}
+\datelocation{November 2016 - May 2017}{Bay Area, CA}
+\begin{tightemize}
+\item Developed end-to-end test frameworks, performance metrics, \& monitoring dashboards to help meet NRT data pipeline SLAs
 \end{tightemize}
 \sectionsep 
 
 \runsubsection{IBM}
 \jobtitle{Staff Software Engineer}
-\datelocation{June 2016 - November 2016}{San Francisco, CA}
+\datelocation{June 2014 - November 2016}{Bay Area, CA}
 \begin{tightemize}
-\item Lead continuous integration of mobile project
-\item Develop multi-threaded automation framework for stable \& reliable GUI testing
-\item Manage customer delivery of framework \& support customer installations of application
-\item Develop bulk data loading apps to reduce load times by more than 50\%
-\item Build a robot interfacing with the IBM Watson IoT API\smallbreak
-\begin{tightemize}
-\item Natural language classifier, voice-to-text, \& text-to-voice
-\item Node.js command-and-control server with iOS Swift client app
-\end{tightemize}
+\item Led a team building a robot to interface with IBM's Watson IoT API using natural language classifiers, voice-to-text \& text-to-voice, Node.js command-\&-control server with iOS Swift client
+\item Administered virtual labs for development \& testing using clusters of virtualized machines using VMware vSphere, vCluster, \& VirtualBox
+\item Led continuous integration of mobile project; designed \& developed Appium-based mobile automation framework; evangelized best practice testing methodologies 
+\item Managed customer delivery of automation framework for our white label software
+\item Developed ETLs to improve performance by more than 50\%
 \end{tightemize}
 \sectionsep
 
-\runsubsection{IBM}
-\jobtitle{Software Engineer}
-\datelocation{June 2014 - May 2016}{San Francisco, CA}
+\runsubsection{Freelance}
+\jobtitle{Product Engineer}
+\datelocation{October 2011 - Current}{USA}
 \begin{tightemize}
-\item Lead design \& development of Appium-based mobile automation framework 
-\item Design \& implement application layer of web framework \smallbreak
-\begin{tightemize}
-\item Improve time-to-value by reducing development by more than 50\%
-\end{tightemize}
-
-\item Improve automated data import process by 10x speed
-\item Design \& implement implicit wait algorithm for 10x speed improvement
-\item Automate multiple manual workflow processes to drive team agility
-\item Create \& manage application environments, including:\smallbreak
-
-\begin{tightemize}
- \item Linux(RHEL) \& Windows servers
- \item WebSphere \& Tomcat app servers
- \item MS SQL, Oracle, DB2, \& MySQL databases
-\end{tightemize}
-
-
-\end{tightemize}
-\sectionsep
-
-\runsubsection{IBM}
-\jobtitle{Software Engineer Intern }
-\datelocation{June 2013 - December 2013}{San Ramon, CA}
-\begin{tightemize}
-\item Develop Selenium-based automation framework for QA regression testing
-\item Develop automated test suite totaling more than 200 test cases
-\item Build automation lab of virtual machines for remote automated testing
-\end{tightemize}
-\sectionsep
-
-
-\runsubsection{VT Software Technologies Lab}
-\jobtitle{Developer }
-\datelocation{September 2012 - May 2013}{Blacksburg, VA}
-\begin{tightemize}
-\item Implement customized web applications
-\item Upgrade and maintain existing database systems
-\item Redesign existing user interfaces to increase product usability
-\end{tightemize}
-\sectionsep
-
-\runsubsection{The Cartel}
-\jobtitle{Mobile \& Web Developer }
-\datelocation{May 2012 - May 2013}{Los Angeles, CA}
-\begin{tightemize}
-\item Design and develop mobile applications for iOS and Android
-\item Design and develop websites for clients
-\end{tightemize}
-\sectionsep
-
-\runsubsection{Handshake Media}
-\jobtitle{Mobile \& Web Developer }
-\datelocation{October 2011 - May 2012}{Blacksburg, VA}
-\begin{tightemize}
-\item Develop mobile applications for iOS and Android
-\item Develop a web application using the Django Python framework
-\item Finalist in the VT KnowledgeWorks Entrepreneurship Challenge
-\end{tightemize}
-\sectionsep
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     RESEARCH
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{Research}
-\runsubsection{Virginia Tech}
-\jobtitle{Undergraduate Research}
-\datelocation{January 2011 - May 2012}{Blacksburg, VA}
-\begin{tightemize}
-\item Develop a distributed game with different versions to understand the effect of visible information \& information security on user interactions
-\item Assist with data collection and management during experimental sessions
+\item Designed \& developed custom web \& Electron apps including a solution to manage the book of business for international film \& tv production \& talent agency
+\item Accepted into IBM BlueMix Startup Accelerator for competitive mobile social app focused on sports fans
+\item Finalist in the VT KnowledgeWorks Entrepreneurship Challenge for mobile app focused on mental health 
 \end{tightemize}
 \sectionsep
 
